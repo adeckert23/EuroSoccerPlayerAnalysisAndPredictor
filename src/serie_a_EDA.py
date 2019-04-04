@@ -64,6 +64,7 @@ df[cols] = df[cols].apply(pd.to_numeric, errors='coerce', axis=1)
 df.fillna(0, inplace=True)
 
 #break appearances into 2 seperate columns
+#THIS DOESN"T WORK FOR PLAYERS WITH NO SUB APPEARANCES.  NEEDS IF STATEMENT
 def apps_columns(df):
     Apps = df['Apps']
     Apps = Apps.str.slice(stop=-1)
@@ -75,7 +76,9 @@ def apps_columns(df):
 
 apps_columns(df)
 
-df
+df.describe()
+
+
 
 df['Apps'][0]
 df.head()
