@@ -27,8 +27,9 @@ def league_seperator(df):
 
 #pass in a league dataframe, output scaled features
 def DF_Scaler(df):
-    cols = ['Rating','Goals', 'Assists', 'SpG', 'PS%','KeyP', 'Drb',
+    cols = ['Goals', 'Assists', 'SpG', 'PS%','KeyP', 'Drb',
     'Fouled','mis_cont', 'Tackles', 'Inter', 'Crosses', 'Fouls', 'Clear', 'Blocks']
+    df['Rating'] = (df['Rating']*5)/10
     for item in cols:
         Max = df[item].max()
         df[item] = (df[item]*5)/Max
