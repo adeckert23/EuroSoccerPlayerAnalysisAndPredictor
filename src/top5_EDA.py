@@ -3,18 +3,30 @@ import pandas as pd
 import os
 import re
 import matplotlib.pyplot as plt
-
+from importlib import reload
+import dataframe_cleaner
+from dataframe_cleaner import df_cleaner
+import funcs
+reload(funcs)
+from funcs import DF_Scaler
 #os.chdir('..')
+
+
 df = pd.read_csv('/Users/alexdeckwork/Galvanize/Galvrepos/soccer-proj/data/top5.csv')
 
-
-from df_cleaner import df_cleaner
 from funcs import league_seperator, MVP_calculator, ratings_grabber
 
 df = df_cleaner(df)
+
 Bundesliga, Prem, La_liga, Ligue_1, Serie_a = league_seperator(df)
-MVP_calculator(Bundesliga)
-ratings_grabber(Bundesliga)
+
+# MVP_calculator(Bundesliga)
+# ratings_grabber(Bundesliga)
+
+#-------------------------------------------------------------------------------
+
+
+
 
 
 #-------------------------------------------------------------------------------

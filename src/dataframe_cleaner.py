@@ -50,11 +50,11 @@ def df_cleaner(df):
     df = clean_apps_col(df)
     df = clean_sub_apps_col(df)
     #columns and order I want the dataframe to end up as
-    cs = ['Player', 'age', 'position', 'Mins','starts', 'sub_apps', 'Goals', 'Assists',
-        'SpG', 'PS%', 'MotM', 'KeyP', 'Drb','Fouled', 'Off','mis_cont', 'Tackles',
-        'Inter','Fouls', 'Offsides','Clear', 'Blocks', 'OwnG', 'AvgP', 'Crosses',
-        'LongB','ThrB', 'Yel','Red','KG','CM', 'English_Prem', 'Ligue_1', 'Bundesliga',
-        'Serie_A', 'La_Liga']
+    cs = ['Player', 'age', 'position', 'Mins','starts', 'sub_apps', 'Rating',
+        'Goals', 'Assists','SpG', 'PS%', 'MotM', 'KeyP', 'Drb','Fouled', 'Off',
+        'mis_cont', 'AerialsWon','Tackles','Inter','Fouls', 'Offsides','Clear', 'Blocks',
+        'OwnG', 'AvgP', 'Crosses','LongB','ThrB', 'Yel','Red','KG','CM',
+        'English_Prem', 'Ligue_1', 'Bundesliga','Serie_A', 'La_Liga']
     df = df[cs]
 
     return df

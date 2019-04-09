@@ -2,9 +2,9 @@ import numpy as np
 import pylab as pl
 
 class Radar1(object):
-    def __init__(self, figure, title, labels, ylims, rect=None):
+    def __init__(self, figure, title, labels, rect=None):
         if rect is None:
-            rect = [0.05, 0.05, 0.95, 0.95]
+            rect = [0.05, 0.05, .85, .85]
 
         self.n = len(title)
         self.angles = np.arange(0, 360, 360.0/self.n)
@@ -19,10 +19,10 @@ class Radar1(object):
             ax.grid(False)
             ax.xaxis.set_visible(False)
 
-        for ax, angle, label, lim in zip(self.axes, self.angles, labels, ylims):
+        for ax, angle, label in zip(self.axes, self.angles, labels):
             ax.set_rgrids(range(0, 6), angle=angle, labels=label)
             ax.spines['polar'].set_visible(False)
-            ax.set_ylim(0, )  #this needs to be changed, currently on a 0-5 scale, all features scaled by value of x/5
+            ax.set_ylim(0, 5)  #this needs to be changed, currently on a 0-5 scale, all features scaled by value of x/5
             ax.set_theta_offset(np.deg2rad(0))
 
     def plot(self, values, *args, **kw):
