@@ -54,7 +54,7 @@ def df_cleaner(df):
         'Goals', 'Assists','SpG', 'PS%', 'MotM', 'KeyP', 'Drb','Fouled', 'Off',
         'mis_cont', 'AerialsWon','Tackles','Inter','Fouls', 'Offsides','Clear', 'Blocks',
         'OwnG', 'AvgP', 'Crosses','LongB','ThrB', 'Yel','Red','KG','CM',
-        'English_Prem', 'Ligue_1', 'Bundesliga','Serie_A', 'La_Liga']
+        'English_Prem', 'Ligue_1', 'Bundesliga','Serie_A', 'La_Liga', 'Team']
     df = df[cs]
 
     return df

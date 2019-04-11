@@ -27,8 +27,8 @@ def league_seperator(df):
 
 #pass in a league dataframe, output scaled features
 def DF_Scaler(df):
-    cols = ['Goals', 'Assists', 'SpG', 'PS%','KeyP', 'Drb',
-    'Fouled','mis_cont', 'Tackles', 'Inter', 'Crosses', 'Fouls', 'Clear', 'Blocks']
+    cols = ['Goals', 'Assists', 'SpG', 'PS%','KeyP', 'Drb', 'AvgP', 'Fouled',
+    'mis_cont', 'Tackles', 'Inter', 'Crosses', 'Fouls', 'Clear', 'Blocks']
     df['Rating'] = (df['Rating']*5)/10
     for item in cols:
         Max = df[item].max()
@@ -60,3 +60,12 @@ def ratings_grabber(df):
     idx = np.flip(idx)
     top_ratings = df.iloc[idx,:]
     return top_ratings
+
+#fifa player names cleaner
+def fifa_data_cleaner(df):
+    df.drop(labels=['Unnamed: 0', 'Photo', 'Nationality', 'Flag', 'Potential',
+    'Club Logo', 'Value', 'Wage', 'Special', 'International Reputation', 'Weak Foot',
+    'Skill Moves', 'Real Face', 'Jersey Number', 'Joined', 'Loaned From',
+    'Contract Valid Until', 'GKDiving', 'GKHandling', 'GKKicking', 'GKPositioning',
+    'GKReflexes', 'Release Clause'],inplace=True, axis=1)
+    return df
