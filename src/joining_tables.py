@@ -237,7 +237,7 @@ master2['Predicted_Std_Tackle'] = GBmodel.predict(X_defense)
 master2['Predicted_Sliding_Tackle'] = GBmodel.predict(X_defense)
 #-------------------------------------------------------------------------------
 #Predicting Overall based on generated predicted attributes
-X_overall = master2.loc[:,['Mins', 'Rating','Predicted_Dribbling', 'Predicted_Marking', 'Predicted_Finishing',
+X_overall = master2.loc[:,['Predicted_Dribbling', 'Predicted_Marking', 'Predicted_Finishing',
 'Predicted_Std_Tackle', 'Predicted_Ball_Control','Predicted_long_passing',
 'Predicted_Interceptions', 'Predicted_Sliding_Tackle']]
 y_overall = master.loc[:,['Overall']].values
@@ -248,8 +248,19 @@ GBmodel.fit(X_train, y_train)
 GBmodel.score(X_test, y_test)
 GBmodel.feature_importances_
 
-master2['Predicted_Overall'] = GBmodel.predict(X_dribbling)
+master2['Predicted_Overall'] = GBmodel.predict(X_overall)
 #-------------------------------------------------------------------------------
+master2[master2['Player']=='Neymar']
+master2.columns
+master3 = master2.loc[:,['Player', 'Finishing', 'Predicted_Finishing', 'Dribbling',
+'Predicted_Dribbling', 'ShortPassing','Predicted_short_passing', 'LongPassing',
+'Predicted_long_passing', 'BallControl', 'Predicted_Ball_Control', 'Interceptions',
+'Predicted_Interceptions', 'Marking','Predicted_Marking', 'StandingTackle',
+'Predicted_Std_Tackle', 'SlidingTackle','Predicted_Sliding_Tackle', 'Overall','Predicted_Overall']]
+
+master3[master3['Player']=='Luka Modric']
+pd.set_option('display.max_columns', 500)
+
 #-------------------------------------------------------------------------------
 
 Player_Profile = master2.loc[:,['Player', 'age', 'Team','UniqueID',]]
