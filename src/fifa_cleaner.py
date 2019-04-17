@@ -23,4 +23,7 @@ def fifa_df_cleaner(df):
     df.drop('Attacking Work Rate_Low', axis=1, inplace=True)
     df.drop('Defensive Work Rate_ Low', axis=1, inplace=True)
 
+    #drop club values that have NA
+    fifa = fifa.dropna(subset=['Club'])
+
     return df

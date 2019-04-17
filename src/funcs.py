@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 import os
 import re
+import unidecode
 # os.chdir('..')
 
 #pass in main clean dataframe
@@ -60,3 +61,10 @@ def ratings_grabber(df):
     idx = np.flip(idx)
     top_ratings = df.iloc[idx,:]
     return top_ratings
+
+#stripping accents from player names and team names
+def accent_stripper(series):
+    a=[]
+    for item in series:
+        a.append(unidecode.unidecode(item))
+    return a

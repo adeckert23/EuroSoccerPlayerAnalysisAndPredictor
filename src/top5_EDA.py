@@ -20,16 +20,12 @@ from funcs import league_seperator, MVP_calculator, ratings_grabber
 df = df_cleaner(df)
 Bundesliga, Prem, La_liga, Ligue_1, Serie_a = league_seperator(df)
 
-Bundesliga.columns
+df
 # MVP_calculator(Bundesliga)
 # ratings_grabber(Bundesliga)
 
 #-------------------------------------------------------------------------------
 
-fifa = pd.read_csv('/Users/alexdeckwork/Galvanize/Galvrepos/soccer-proj/data/fifa19_data.csv')
-fifa = fc.fifa_df_cleaner(fifa)
-fifa[fifa['Name']=='R. Garcia']
-fifa
 
 #-------------------------------------------------------------------------------
 #Bundesliga.describe()#50% min percentile = 963
