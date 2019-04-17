@@ -27,5 +27,7 @@ class Radar1(object):
 
     def plot(self, values, *args, **kw):
         angle = np.deg2rad(np.r_[self.angles, self.angles[0]])
+        print(len(angle))
         values = np.r_[values, values[0]]
+        print(len(values))
         self.ax.plot(angle, values, *args, **kw)
