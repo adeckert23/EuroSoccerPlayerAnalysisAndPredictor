@@ -11,7 +11,7 @@ Graphing key storylines of the 2018-2019 season such as:
 * [Top Strikers in Serie A](images/Serie_a_strikers.png)
 * [Analyzing the RB of the Premier League's Top 6](images/Prem_RB.png)
 * [Analyzing a possible youthful RB transfer](images/Prem_RB_Replacement.png)
-[and many more...](images/)
+* [and many more...](images/)
 
 ### The Prediction Project
 Trying to accurately predict player attributes, to create virtual player profiles using in game event statistics from the top 5 league's.
