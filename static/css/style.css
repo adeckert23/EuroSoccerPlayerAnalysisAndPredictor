@@ -285,7 +285,8 @@ a:hover, a:active, a:focus {
 }
 
 .main-about {
-  background: url('../images/about-bg.jpg') no-repeat;
+  background: url('../images/FavelaField.jpg') no-repeat;
+	height: 120vh;
 }
 
 .main-single-post {
@@ -297,7 +298,8 @@ a:hover, a:active, a:focus {
 }
 
 .main-contact {
-  background: url('../images/contact-bg.jpg') no-repeat;
+  background: url('../images/Rui_Materazzi_Flares.jpg') no-repeat;
+	height: 120vh;
 }
 
 #particles-js {
