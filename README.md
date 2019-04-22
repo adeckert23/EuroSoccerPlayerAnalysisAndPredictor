@@ -6,7 +6,7 @@ Data analysis of players in similar positions, and their output graphed onto rad
 Graphing key storylines of the 2018-2019 season such as:
 * [Messi vs Ronaldo](images/Messi_vs_Ronaldo.png)
 * [A lookback at the the previous Player of the Year candidates](images/Fifa_POY.png)
-* [Top Playmakers in the Bundesliga](images/Bund_Playmakers.png)
+* [Top Playmakers in the Bundesliga](images/Bundesliga_Playmakers.png)
 * [Top Playmakers in the Premier League](images/Prem_Playmakers.png)
 * [Top Strikers in Serie A](images/Serie_a_strikers.png)
 * [Analyzing the RB of the Premier League's Top 6](images/Prem_RB.png)
