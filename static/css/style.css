@@ -290,7 +290,8 @@ a:hover, a:active, a:focus {
 }
 
 .main-single-post {
-  background: url('../images/single-post-bg.jpg') no-repeat;
+  background: url('../images/Cruyff6.jpg') no-repeat;
+	height: 100vh
 }
 
 .main-gallery {
