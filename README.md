@@ -18,8 +18,7 @@ Trying to accurately predict player attributes, to create virtual player profile
 * [Virtual Player Profiles for Modric and Pulisic](images/Virtual_Player_Profiles.png)
 
 ### The Data: 
-Scraped from a prominent event statistic soccer website.
+* Scraped from a prominent event statistic soccer website.
 All scraped data as of April 3, 2019, 1pm Eastern (USA) time
 
-* Fifa 19 Player data from Kaggle Dataset
-* [Fifa 19 Player data from Kaggle Dataset](https://www.kaggle.com/karangadiya/fifa19)
+* Fifa 19 Player data from Kaggle Dataset [Fifa 19 Player data from Kaggle Dataset](https://www.kaggle.com/karangadiya/fifa19)
