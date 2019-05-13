@@ -35,7 +35,8 @@ All scraped data as of April 3, 2019, 1pm Eastern (USA) time
 * [Blog click through on home page, article 3] (images/FI_Blog3)
 * [Blog click through on home page, article 4] (images/FI_Blog-4)
 
-Please feel free to let me know what you think
+Please feel free to let me know what you think!
+
 You can either contact me on github, find me on linkedin, or email me at adeckert23@gmail.com
 
 Thank you!
