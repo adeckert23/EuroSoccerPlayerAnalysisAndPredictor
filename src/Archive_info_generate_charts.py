@@ -41,7 +41,6 @@
 # Sane = Prem_chart_df.loc[140].values
 # Sterling = Prem_chart_df.loc[144].values
 # Salah = Prem_chart_df.loc[429].values
-# Pogba = Prem_chart_df.loc[193].values
 
 
 # labels = [np.around(np.linspace(0,10,6),2), np.around(np.linspace(0,19,6),2),
@@ -159,4 +158,66 @@
 # fig.suptitle('Young Defenders', fontsize=16)
 # fig.savefig('Young_Defenders.png')
 
+#-------------------------------------------------------------------------------
+# Robertson = chart_prep.loc[419].values
+# Shaw = chart_prep.loc[186].values
+# Alonso = chart_prep.loc[291].values
+# Rose = chart_prep.loc[391].values
+# Kolasinac = chart_prep.loc[514].values
+# Mendy = chart_prep.loc[128].values
+#
+# #Figure
+# fig.clear()
+#
+# fig = plt.figure(figsize=(10, 10))
+# #Name to appear
+# titles =['Rating', 'Assists', 'Drb','PS%', 'Crosses', 'mis_cont', 'Tackles', 'Inter', 'Fouls', 'Clear', 'Blocks']
+# #Numerical labels to be displayed along each axis
+# labels = [np.around(np.linspace(0,10,6),2), np.around(np.linspace(0,11,6),2),
+#     np.around(np.linspace(0,3.2,6),2), np.around(np.linspace(0,100,6),2),
+#     np.around(np.linspace(0,2.3,6),2), np.around(np.linspace(0,8.8,6),2),
+#     np.around(np.linspace(0,4.3,6),2), np.around(np.linspace(0,2.9,6),2),
+#     np.around(np.linspace(0,2.3,6),2), np.around(np.linspace(0,5,6),2),
+#     np.around(np.linspace(0,1,6),2)]
+#
+#
+# radar = Radar1(fig, titles, labels)
+# radar.plot(Robertson[1:], '-', lw=5, color='r', alpha=0.4, label=Robertson[0])
+# radar.plot(Shaw[1:], '-', lw=5, color='k', alpha=0.4, label=Shaw[0])
+# radar.plot(Alonso[1:], '-', lw=5, color='b', alpha=0.4, label=Alonso[0])
+# radar.plot(Rose[1:], '-', lw=5, color='m', alpha=0.4, label=Rose[0])
+# radar.plot(Kolasinac[1:], '-', lw=5, color= 'g', alpha=0.4, label=Kolasinac[0])
+# radar.plot(Mendy[1:], '-', lw=5, color= 'c', alpha=0.4, label=Mendy[0])
+#
+# radar.ax.legend()
+# fig.suptitle('Premier League LB', fontsize=22)
+# fig.savefig('Prem_LB.png')
+#-------------------------------------------------------------------------------
+# Bale = chart_prep.loc[1496].values
+# Benzema = chart_prep.loc[1500].values
+# Asensio = chart_prep.loc[1506].values
+#
+# #Figure
+# fig.clear()
+#
+# fig = plt.figure(figsize=(10, 10))
+# #Name to appear
+# titles =['Rating', 'Goals', 'Assists', 'SpG', 'Drb', 'KeyP','PS%',
+#             'Crosses', 'Fouled', 'mis_cont']
+# #Numerical labels to be displayed along each axis
+# labels = [np.around(np.linspace(0,10,6),2), np.around(np.linspace(0,32,6),2),
+#     np.around(np.linspace(0,12,6),2), np.around(np.linspace(0,5.2,6),2),
+#     np.around(np.linspace(0,4.1,6),2), np.around(np.linspace(0,2.9,6),2),
+#     np.around(np.linspace(0,100,6),2), np.around(np.linspace(0,3,6),2),
+#     np.around(np.linspace(0,3.2,6),2), np.around(np.linspace(0,7,6),2)]
+#
+#
+# radar = Radar1(fig, titles, labels)
+# radar.plot(Bale[1:], '-', lw=5, color='r', alpha=0.4, label=Bale[0])
+# radar.plot(Benzema[1:], '-', lw=5, color='b', alpha=0.4, label=Benzema[0])
+# radar.plot(Asensio[1:], '-', lw=5, color='g', alpha=0.4, label=Asensio[0])
+#
+# radar.ax.legend()
+# fig.suptitle('Ronaldos Replacement', fontsize=22)
+# fig.savefig('Madrid_front_three.png')
 #-------------------------------------------------------------------------------

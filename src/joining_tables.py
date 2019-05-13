@@ -17,11 +17,12 @@ os.chdir('..')
 
 fifa = pd.read_csv('data/fifa19_data.csv')
 fifa = fc.fifa_df_cleaner(fifa)
+fifa.info()
 #Scraped data of top 5 leagues
 df = pd.read_csv('/Users/alexdeckwork/Galvanize/Galvrepos/soccer-proj/data/top5.csv')
 df = df_cleaner(df)
 
-#scraped data as df1, fifa df as df2
+#scraped df as df1, fifa df as df2
 def join_tables(scraped, feef):
 
     scraped_names = {'AC Milan': 'ACMilan', 'Amiens': 'Amiens', 'Angers':'Angers',
@@ -56,37 +57,37 @@ def join_tables(scraped, feef):
      'Watford':'Watford','Werder Bremen':'WerderBremen','West Ham':'WestHam',
      'Wolfsburg':'Wolfsburg','Wolverhampton Wanderers':'Wolves'}
 
-     feef_names = {'Milan':'ACMilan', 'Amiens SC': 'Amiens', 'Angers SCO': 'Angers',
+    feef_names = {'Milan':'ACMilan', 'Amiens SC': 'Amiens', 'Angers SCO': 'Angers',
      'Arsenal':'Arsenal','Atalanta':'Atalanta', 'Athletic Club de Bilbao': 'AthleticBilbao',
      'Atletico Madrid': 'AtleticoMadrid', 'FC Augsburg':'Augsburg', 'FC Barcelona':'Barcelona',
-      'Bayer 04 Leverkusen': 'BayerLeverkusen', 'FC Bayern Munchen':'BayernMunich',
-      'Bologna':'Bologna', 'FC Girondins de Bordeaux':'Bordeaux', 'Borussia Dortmund':'BorussiaDortmund',
-      'Borussia Monchengladbach':'BorussiaMonchengladbach', 'Bournemouth':'Bournemouth',
-      'Brighton & Hove Albion':'Brighton', 'Burnley':'Burnley', 'Stade Malherbe Caen':'Caen',
-      'Cagliari':'Cagliari', 'Cardiff City':'Cardiff', 'RC Celta':'CeltaVigo','Chelsea':'Chelsea',
-      'Chievo Verona':'Chievo', 'Crystal Palace':'CrystalPalace', 'Deportivo Alaves':'DeportivoAlaves',
-      'Dijon FCO':'Dijon', 'SD Eibar':'Eibar', 'Eintracht Frankfurt':'EintrachtFrankfurt',
-      'Empoli':'Empoli', 'RCD Espanyol':'Espanyol', 'Everton':'Everton', 'Fiorentina':'Fiorentina',
-      'Fortuna Duesseldorf':'FortunaDuesseldorf', 'SC Freiburg':'Freiburg', 'Frosinone':'Frosinone',
-      'Fulham':'Fulham','Genoa':'Genoa', 'Getafe CF':'Getafe', 'Girona FC':'Girona',
-      'En Avant de Guingamp':'Guingamp', 'Hannover 96':'Hannover96', 'Hertha BSC':'HerthaBerlin',
-      'TSG 1899 Hoffenheim':'Hoffenheim', 'Huddersfield Town':'Huddersfield', 'Inter':'InterMilan',
-      'Juventus':'Juventus', 'Lazio':'Lazio', 'CD Leganes':'Leganes', 'Leicester City':'Leicester',
-      'Levante UD':'Levante', 'LOSC Lille':'Lille', 'Liverpool':'Liverpool', 'Olympique Lyonnais':'Lyon',
-      '1. FSV Mainz 05': 'Mainz05', 'Manchester City':'ManchesterCity', 'Manchester United':'ManchesterUnited',
-      'Olympique de Marseille':'Marseille', 'AS Monaco':'Monaco', 'Montpellier HSC':'Montpellier',
-      'FC Nantes':'Nantes', 'Napoli':'Napoli', 'Newcastle United':'NewcastleUnited', 'OGC Nice':'Nice',
-      'Nimes Olympique':'Nimes','1. FC Nurnberg':'Nuernberg', 'Paris Saint-Germain':'PSG',
-      'Parma':'Parma', 'RB Leipzig':'RBLeipzig','Rayo Vallecano':'RayoVallecano',
-      'Real Betis':'RealBetis', 'Real Madrid':'RealMadrid','Real Sociedad':'RealSociedad',
-      'Real Valladolid CF':'Real Valladolid', 'Stade de Reims':'Reims', 'Stade Rennais FC':'Rennes',
-      'Roma':'Roma','SD Huesca':'Huesca','SPAL':'SPAL', 'AS Saint-Etienne':'SaintEtienne',
-      'Sampdoria':'Sampdoria','Sassuolo':'Sassuolo','FC Schalke 04':'Schalke',
-      'Sevilla FC':'Sevilla', 'Southampton':'Southampton','RC Strasbourg Alsace':'Strasbourg',
-      'Torino':'Torino','Tottenham Hotspur':'Tottenham','Toulouse Football Club':'Toulouse',
-      'Udinese':'Udinese','Valencia CF':'Valencia', 'VfB Stuttgart':'Stuttgart','Villarreal CF':'Villarreal',
-      'Watford':'Watford','SV Werder Bremen':'WerderBremen','West Ham United':'WestHam',
-      'VfL Wolfsburg':'Wolfsburg','Wolverhampton Wanderers':'Wolves'}
+     'Bayer 04 Leverkusen': 'BayerLeverkusen', 'FC Bayern Munchen':'BayernMunich',
+     'Bologna':'Bologna', 'FC Girondins de Bordeaux':'Bordeaux', 'Borussia Dortmund':'BorussiaDortmund',
+     'Borussia Monchengladbach':'BorussiaMonchengladbach', 'Bournemouth':'Bournemouth',
+     'Brighton & Hove Albion':'Brighton', 'Burnley':'Burnley', 'Stade Malherbe Caen':'Caen',
+     'Cagliari':'Cagliari', 'Cardiff City':'Cardiff', 'RC Celta':'CeltaVigo','Chelsea':'Chelsea',
+     'Chievo Verona':'Chievo', 'Crystal Palace':'CrystalPalace', 'Deportivo Alaves':'DeportivoAlaves',
+     'Dijon FCO':'Dijon', 'SD Eibar':'Eibar', 'Eintracht Frankfurt':'EintrachtFrankfurt',
+     'Empoli':'Empoli', 'RCD Espanyol':'Espanyol', 'Everton':'Everton', 'Fiorentina':'Fiorentina',
+     'Fortuna Duesseldorf':'FortunaDuesseldorf', 'SC Freiburg':'Freiburg', 'Frosinone':'Frosinone',
+     'Fulham':'Fulham','Genoa':'Genoa', 'Getafe CF':'Getafe', 'Girona FC':'Girona',
+     'En Avant de Guingamp':'Guingamp', 'Hannover 96':'Hannover96', 'Hertha BSC':'HerthaBerlin',
+     'TSG 1899 Hoffenheim':'Hoffenheim', 'Huddersfield Town':'Huddersfield', 'Inter':'InterMilan',
+     'Juventus':'Juventus', 'Lazio':'Lazio', 'CD Leganes':'Leganes', 'Leicester City':'Leicester',
+     'Levante UD':'Levante', 'LOSC Lille':'Lille', 'Liverpool':'Liverpool', 'Olympique Lyonnais':'Lyon',
+     '1. FSV Mainz 05': 'Mainz05', 'Manchester City':'ManchesterCity', 'Manchester United':'ManchesterUnited',
+     'Olympique de Marseille':'Marseille', 'AS Monaco':'Monaco', 'Montpellier HSC':'Montpellier',
+     'FC Nantes':'Nantes', 'Napoli':'Napoli', 'Newcastle United':'NewcastleUnited', 'OGC Nice':'Nice',
+     'Nimes Olympique':'Nimes','1. FC Nurnberg':'Nuernberg', 'Paris Saint-Germain':'PSG',
+     'Parma':'Parma', 'RB Leipzig':'RBLeipzig','Rayo Vallecano':'RayoVallecano',
+     'Real Betis':'RealBetis', 'Real Madrid':'RealMadrid','Real Sociedad':'RealSociedad',
+     'Real Valladolid CF':'Real Valladolid', 'Stade de Reims':'Reims', 'Stade Rennais FC':'Rennes',
+     'Roma':'Roma','SD Huesca':'Huesca','SPAL':'SPAL', 'AS Saint-Etienne':'SaintEtienne',
+     'Sampdoria':'Sampdoria','Sassuolo':'Sassuolo','FC Schalke 04':'Schalke',
+     'Sevilla FC':'Sevilla', 'Southampton':'Southampton','RC Strasbourg Alsace':'Strasbourg',
+     'Torino':'Torino','Tottenham Hotspur':'Tottenham','Toulouse Football Club':'Toulouse',
+     'Udinese':'Udinese','Valencia CF':'Valencia', 'VfB Stuttgart':'Stuttgart','Villarreal CF':'Villarreal',
+     'Watford':'Watford','SV Werder Bremen':'WerderBremen','West Ham United':'WestHam',
+     'VfL Wolfsburg':'Wolfsburg','Wolverhampton Wanderers':'Wolves'}
 
     #index to drop
     index_td = [444,1929,925,926,1668,1670,778,779,117,120,2227,2228,1035,1038,246,249,1353,1356,1398,
@@ -126,7 +127,7 @@ def join_tables(scraped, feef):
     master = master.append(neymar)
 
     master.drop(labels=['Name', 'Age', 'ID', 'Club', 'position',
-                        'KG','CM']axis=1, inplace=True)
+                        'KG','CM'],axis=1, inplace=True)
 
     return master
 #-------------------------------------------------------------------------------
@@ -134,6 +135,9 @@ def join_tables(scraped, feef):
 #First, let's predict overall
 #Second, let's go granular and predict a player profile
 #()
+join_tables(df, fifa)
+#-------------------------------------------------------------------------------
+
 master.head()
 master.columns
 master.info()
